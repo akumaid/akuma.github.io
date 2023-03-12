@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="https://www.blogger.com/video.g?token=AD6v5dyr5hLIjBvmxpvHJ_HyviXF3Nm2t5e3cKRIVWZO6fjcJ9SP7j9Js9pCs-GUKfPNQsNefloFccFeoeATceHecN7YkRiPnONPHRaQGz4QX9gjaKa29gPg7pJ5twVhP3TaQ9rZf6E" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://streamsb.net/embed-9udqcl6wisre?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dyr5hLIjBvmxpvHJ_HyviXF3Nm2t5e3cKRIVWZO6fjcJ9SP7j9Js9pCs-GUKfPNQsNefloFccFeoeATceHecN7YkRiPnONPHRaQGz4QX9gjaKa29gPg7pJ5twVhP3TaQ9rZf6E')">Google V2</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://gdplayer.to/embed/?eno3UFlPaHNQUWVqRVVJSnlOS2lRTEZJRndHREVKRjlRQWV3ZWFEdkVHNjdXUEE2NndET3BMM1dFWFdkaWovT1pGMVEvbUVRRXFRTVdkYnR5T1VpMnBtMWZudEVQcUdUSC9vY0VxUXpMeHZnRWlDWm1JakpIZHVXQ2wrNUlIc0JPTWFTbVUvb2c0UHIrRGFsSlYrcTFSMm1OeTJkbi9VUk42bU9BZWkwMktpUkxFZ3JxNjBPTTFiczNBQUMzSXc0')">Gdplayer</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://krakenfiles.com/embed-video/rdx6uNP9Zf')">Kraken</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.mp4upload.com/embed-1x51rkd2z4i3.html')">Mp4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>

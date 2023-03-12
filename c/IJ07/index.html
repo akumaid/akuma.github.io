@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="https://www.blogger.com/video.g?token=AD6v5dydGD8-p5G6rSDr42CZrpOo-trBIJ0UNRgE2KVSTy_-ttxFssMyUGDJJBjkgX9ifgkvPIMQpqF_j0qKAJQau1wiKwefwWZmPJGUb0bPwDSX6pBi3axu5OfNyNaDKf9xHrESXik" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn">
+          <a href="javascript:void" onclick="go('https://streamsb.net/embed-dxqqhc9512pr?poster=https://kuma-stream.github.io/src/poster.png')">Streamsb</a>
+        </li>
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dydGD8-p5G6rSDr42CZrpOo-trBIJ0UNRgE2KVSTy_-ttxFssMyUGDJJBjkgX9ifgkvPIMQpqF_j0qKAJQau1wiKwefwWZmPJGUb0bPwDSX6pBi3axu5OfNyNaDKf9xHrESXik')">Google V2</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://gdplayer.to/embed/?WnNia2Ryakx1dmU3S2dQdEJCQ3QxbFRMQldFenBtekJQaEMyYXZlRlVFbk1UcWVJWUVQR1NCQ2dGbm9DQVpKWWZobHFhUVorU3NrMUNic1ZvZnR3ckpaeXQyMTBab2pZeHdybTNSMXlPKzRuUDZnTnpPcDZuMWhDUGlCSjhrZE8va1pjT25GaVFvOXlFa1lLeUVPRU53SlEzalV3TFhxWVRhcUtDSThBbllVU2JueEdNVDNtNWVWK25mY21YamdW')">Gdplayer</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
