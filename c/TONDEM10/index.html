@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/c/TONDEM10/akuma" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+		<li class="btn active">
+          <a href="javascript:void" onclick="go('/c/TONDEM10/akuma')">Akumadrive</a>
+        </li>
+        <li class="btn">
+		<a href="javascript:void" onclick="go('/c/TONDEM10/tele')">Tele</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://mega.nz/embed/7NY0RIzS#03MLU3rnDCB2ija5z1s8O_j0t7Q24MKZ4KjBW5fmN4E!1a')">Mega</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('//gdriveplayer.to/embed2.php?link=BPG0O67zYjqLBMiWngOI%252BQJxfadYlsCKfucMZC7CHgHiN7DxbJN2DzPkP%252FdbMrgxlNBecxCLZeEsV5EQ6pPXgHUgJV2o9XM2MdVv5krSsNpViJIPcJGfpmBx8PvGm%252Bwkd6OG%252BreeNK1lSOSejtg1so00VQx5V2GyrhHxcXcN8bZdq31OXo%252BgmYwSJUdYfcC170DAWLqQId6hnOE%252FLYZRuVs8L7ZiEsNrq4pFf5QaYPjQ%253D%253D')">Google V3</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dx3Arpg6WJppsrPDEUJpWGkwEUsTCzaBH7e9kkCd3DexKNvbKrjtp0GcOw6u3sLqPq5VxMpL7hqIPnDcqj18r4jzpP5KH3EAvqaOhu6uYjdpuKNsMbzjiQW48yavMxH3WmyjI0')">Google V2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
